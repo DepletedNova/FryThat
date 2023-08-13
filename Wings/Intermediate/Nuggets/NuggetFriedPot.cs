@@ -17,7 +17,8 @@ namespace JustWingIt.Wings.Intermediate
         public override Item SplitSubItem => GetCastedGDO<Item, FriedNugget>();
         public override int SplitCount => 2;
 
-
+        public override string ColourBlindTag => "Nu";
+        
         public override List<Item.ItemProcess> Processes => new()
         {
             new()

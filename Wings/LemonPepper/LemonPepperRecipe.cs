@@ -29,7 +29,7 @@ namespace JustWingIt.Wings.LemonPepper
         };
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {
-            (Locale.English, CreateUnlockInfo("Lemon Pepper Chicken", "Adds Lemon Pepper as a sauce", "I don't think that's a sauce."))
+            (Locale.English, CreateUnlockInfo("Lemon Pepper Chicken", "Adds Lemon Pepper as a chicken flavour", "I don't think that's a sauce."))
         };
 
         public override HashSet<Dish.IngredientUnlock> IngredientsUnlocks => new()

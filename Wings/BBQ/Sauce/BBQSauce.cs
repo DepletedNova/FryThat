@@ -12,6 +12,8 @@ namespace JustWingIt.Wings.BBQ
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemCategory ItemCategory => ItemCategory.Generic;
 
+        public override string ColourBlindTag => "BBQ";
+
         public override GameObject Prefab => GetPrefab("BBQ Sauce");
         public override void SetupPrefab(GameObject prefab)
         {

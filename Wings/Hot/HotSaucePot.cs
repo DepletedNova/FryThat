@@ -21,6 +21,8 @@ namespace JustWingIt.Wings.Hot
         public override float SplitSpeed => 1.75f;
         public override List<Item> SplitDepletedItems => new() { GetGDO<Item>(ItemReferences.Pot) };
 
+        public override string ColourBlindTag => "Bu";
+
         public override GameObject Prefab => GetPrefab("Hot Sauce Pot");
         public override void SetupPrefab(GameObject prefab)
         {

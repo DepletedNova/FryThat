@@ -31,7 +31,7 @@ namespace JustWingIt.Wings.Buffalo
         };
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {
-            (Locale.English, CreateUnlockInfo("Buffalo Chicken", "Adds Buffalo as a sauce", ""))
+            (Locale.English, CreateUnlockInfo("Buffalo Chicken", "Adds Buffalo as a chicken flavour", ""))
         };
 
         public override HashSet<Dish.IngredientUnlock> IngredientsUnlocks => new()

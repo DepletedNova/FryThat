@@ -15,6 +15,15 @@ namespace JustWingIt.Wings.LemonPepper
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemCategory ItemCategory => ItemCategory.Generic;
 
+        public override List<ItemGroupView.ColourBlindLabel> Labels => new()
+        {
+            new()
+            {
+                Item = GetGDO<Item>(ItemReferences.OilIngredient),
+                Text = "LP"
+            }
+        };
+
         public override List<ItemGroup.ItemSet> Sets => new()
         {
             new()

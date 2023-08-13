@@ -14,6 +14,15 @@ namespace JustWingIt.Wings.Intermediate
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override Item DisposesTo => GetGDO<Item>(ItemReferences.Pot);
 
+        public override List<ItemGroupView.ColourBlindLabel> Labels => new()
+        {
+            new()
+            {
+                Item = GetCastedGDO<Item, FlouredWing>(),
+                Text = "Ch"
+            }
+        };
+
         public override List<ItemGroup.ItemSet> Sets => new()
         {
             new()

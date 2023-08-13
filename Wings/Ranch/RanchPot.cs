@@ -20,6 +20,15 @@ namespace JustWingIt.Wings.Ranch
         public override float SplitSpeed => 1.75f;
         public override List<Item> SplitDepletedItems => new() { GetGDO<Item>(ItemReferences.Pot) };
 
+        public override List<ItemGroupView.ColourBlindLabel> Labels => new()
+        {
+            new()
+            {
+                Item = GetGDO<Item>(ItemReferences.Mayonnaise),
+                Text = "Ra"
+            }
+        };
+
         public override List<ItemGroup.ItemSet> Sets => new()
         {
             new()

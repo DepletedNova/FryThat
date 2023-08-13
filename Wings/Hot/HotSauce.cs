@@ -12,6 +12,8 @@ namespace JustWingIt.Wings.Hot
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemCategory ItemCategory => ItemCategory.Generic;
 
+        public override string ColourBlindTag => "Bu";
+
         public override bool IsConsumedByCustomer => true;
 
         public override GameObject Prefab => GetPrefab("Hot Sauce");
