@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0DDFAA22-1F3B-432D-A244-17C83E25B400}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JustWingIt</RootNamespace>
+    <AssemblyName>JustWingIt</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <LangVersion>latest</LangVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\1599600\2949018507\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="ApplianceLib-Workshop">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\Mods\ApplianceLib\content\ApplianceLib-Workshop.dll</HintPath>
+    </Reference>
+    <Reference Include="Controllers">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Controllers.dll</HintPath>
+    </Reference>
+    <Reference Include="Kitchen.Common">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Kitchen.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Kitchen.FranchiseMode">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Kitchen.FranchiseMode.dll</HintPath>
+    </Reference>
+    <Reference Include="Kitchen.GameData">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Kitchen.GameData.dll</HintPath>
+    </Reference>
+    <Reference Include="Kitchen.Layouts">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Kitchen.Layouts.dll</HintPath>
+    </Reference>
+    <Reference Include="Kitchen.RestaurantMode">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Kitchen.RestaurantMode.dll</HintPath>
+    </Reference>
+    <Reference Include="KitchenLib-Workshop">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\1599600\2898069883\KitchenLib-Workshop.dll</HintPath>
+    </Reference>
+    <Reference Include="KitchenMode">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\KitchenMode.dll</HintPath>
+    </Reference>
+    <Reference Include="KitchenMods">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\KitchenMods.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagePack">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\MessagePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Serialization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Entities">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Unity.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Jobs">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Unity.Jobs.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Serialization">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Unity.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheeseCurds\CheeseCurds.cs" />
+    <Compile Include="CheeseCurds\BurnedCurdPot.cs" />
+    <Compile Include="CheeseCurds\FlouredCheese.cs" />
+    <Compile Include="CheeseCurds\CurdPot.cs" />
+    <Compile Include="CheeseCurds\UncookedCurdPot.cs" />
+    <Compile Include="CheeseCurds\CheeseCurdDish.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Wings\BBQ\BBQRecipe.cs" />
+    <Compile Include="Wings\BBQ\Sauce\BBQPot.cs" />
+    <Compile Include="Wings\BBQ\Sauce\BBQSauce.cs" />
+    <Compile Include="Wings\BBQ\Sauce\UncookedBBQPot.cs" />
+    <Compile Include="Wings\Buffalo\BuffaloRecipe.cs" />
+    <Compile Include="Wings\Hot\HotSauce.cs" />
+    <Compile Include="Wings\Hot\HotSaucePot.cs" />
+    <Compile Include="Wings\Hot\HotRecipe.cs" />
+    <Compile Include="Wings\Hot\UnfermentedHotSauce.cs" />
+    <Compile Include="Wings\Intermediate\Nuggets\FlouredNugget.cs" />
+    <Compile Include="Wings\Intermediate\Nuggets\FriedNugget.cs" />
+    <Compile Include="Wings\Intermediate\Nuggets\NuggetBurnedPot.cs" />
+    <Compile Include="Wings\Intermediate\Nuggets\NuggetFriedPot.cs" />
+    <Compile Include="Wings\Intermediate\Nuggets\NuggetFryingPot.cs" />
+    <Compile Include="Wings\Intermediate\Wings\FriedWing.cs" />
+    <Compile Include="Wings\Intermediate\Wings\WingFriedPot.cs" />
+    <Compile Include="Wings\Intermediate\Wings\WingBurnedPot.cs" />
+    <Compile Include="Wings\Intermediate\Wings\WingFryingPot.cs" />
+    <Compile Include="Wings\Intermediate\Wings\FlouredWing.cs" />
+    <Compile Include="Wings\LemonPepper\LemonPepperRecipe.cs" />
+    <Compile Include="Wings\LemonPepper\Sauce\LemonPepperSauce.cs" />
+    <Compile Include="Wings\PlatedNuggets.cs" />
+    <Compile Include="Wings\PlatedChicken.cs" />
+    <Compile Include="Wings\Ranch\RanchRecipe.cs" />
+    <Compile Include="Wings\Ranch\RanchSauce.cs" />
+    <Compile Include="Wings\Ranch\SourCream.cs" />
+    <Compile Include="Wings\Ranch\RanchPot.cs" />
+    <Compile Include="Wings\Ranch\UnfermentedSourCream.cs" />
+    <Compile Include="Wings\NuggetDish.cs" />
+    <Compile Include="Wings\WingsDish.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IngredientLib\IngredientLib.csproj">
+      <Project>{273e222c-4939-447c-9fcd-3fae7445a797}</Project>
+      <Name>IngredientLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetDir)$(TargetFileName)" "C:\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\Mods\Just Wing It!\content" /y
+copy "C:\PlateUp\Assets\Bundle Generation\Assets\Bundles\justwingit" "C:\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\Mods\Just Wing It!\content" /y
+cd "C:\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\Mods\Just Wing It!\content"
+del "justwingit.assets"
+ren "justwingit" "justwingit.assets"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
