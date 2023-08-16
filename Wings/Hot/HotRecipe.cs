@@ -52,7 +52,7 @@ namespace JustWingIt.Wings.Hot
 
         public override void OnRegister(Dish gdo)
         {
-            gdo.Difficulty = 1;
+            gdo.HideInfoPanel = true;
         }
     }
 }

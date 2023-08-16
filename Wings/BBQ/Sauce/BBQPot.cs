@@ -21,6 +21,8 @@ namespace JustWingIt.Wings.BBQ
         public override float SplitSpeed => 1.75f;
         public override List<Item> SplitDepletedItems => new() { GetGDO<Item>(ItemReferences.Pot) };
 
+        public override string ColourBlindTag => "BBQ";
+
         public override GameObject Prefab => GetPrefab("BBQ Pot");
         public override void SetupPrefab(GameObject prefab)
         {

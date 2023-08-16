@@ -47,7 +47,7 @@ namespace JustWingIt.Wings
 
         public override void OnRegister(Dish gdo)
         {
-            gdo.Difficulty = 3;
+            gdo.Difficulty = 4;
         }
     }
 }

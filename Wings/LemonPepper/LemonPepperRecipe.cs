@@ -58,7 +58,7 @@ namespace JustWingIt.Wings.LemonPepper
 
         public override void OnRegister(Dish gdo)
         {
-            gdo.Difficulty = 2;
+            gdo.Difficulty = 1;
         }
     }
 }
