@@ -13,8 +13,6 @@ namespace JustWingIt.CheeseCurds
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemCategory ItemCategory => ItemCategory.Generic;
 
-        public override bool AutoCollapsing => true;
-
         public override List<ItemGroup.ItemSet> Sets => new()
         {
             new()

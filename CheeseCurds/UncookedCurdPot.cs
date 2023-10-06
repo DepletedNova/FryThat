@@ -32,19 +32,12 @@ namespace JustWingIt.CheeseCurds
                 Items = new()
                 {
                     GetGDO<Item>(OilPot),
+                    GetGDO<Item>(ItemReferences.Flour),
+                    GetGDO<Item>(ItemReferences.CheeseGrated),
                 },
                 IsMandatory = true,
-                Max = 1,
-                Min = 1,
-            },
-            new()
-            {
-                Items = new()
-                {
-                    GetCastedGDO<Item, FlouredCheese>(),
-                },
-                Max = 1,
-                Min = 1,
+                Max = 3,
+                Min = 3,
             }
         };
 
