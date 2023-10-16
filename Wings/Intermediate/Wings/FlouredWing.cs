@@ -29,6 +29,16 @@ namespace JustWingIt.Wings.Intermediate
             }
         };
 
+        public override List<Item.ItemProcess> Processes => new()
+        {
+            new()
+            {
+                Process = GetGDO<Process>(ProcessReferences.Cook),
+                RequiresWrapper = true,
+                Result = GetCastedGDO<Item, FriedWing>()
+            }
+        };
+
         public override GameObject Prefab => GetPrefab("Wing - Floured");
         public override void SetupPrefab(GameObject prefab)
         {

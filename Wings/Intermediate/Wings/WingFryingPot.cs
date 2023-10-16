@@ -19,8 +19,13 @@ namespace JustWingIt.Wings.Intermediate
             new()
             {
                 Item = GetCastedGDO<Item, FlouredWing>(),
-                Text = "Ch"
-            }
+                Text = "W"
+            },
+            new()
+            {
+                Item = GetCastedGDO<Item, FriedWing>(),
+                Text = "FW"
+            },
         };
 
         public override List<ItemGroup.ItemSet> Sets => new()
@@ -40,10 +45,11 @@ namespace JustWingIt.Wings.Intermediate
                 Items = new()
                 {
                     GetCastedGDO<Item, FlouredWing>(),
+                    GetCastedGDO<Item, FlouredWing>(),
                     GetCastedGDO<Item, FlouredWing>()
                 },
-                Max = 2,
-                Min = 2
+                Max = 3,
+                Min = 1
             }
         };
 
@@ -51,7 +57,7 @@ namespace JustWingIt.Wings.Intermediate
         {
             new()
             {
-                Result = GetCastedGDO<Item, WingFriedPot>(),
+                Result = GetCastedGDO<ItemGroup, WingFriedPot>(),
                 Duration = 3f,
                 Process = GetGDO<Process>(ProcessReferences.Cook)
             }

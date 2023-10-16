@@ -57,7 +57,7 @@ namespace JustWingIt.Wings.Intermediate
             }
         };
 
-        public override GameObject Prefab => GetPrefab("Nugget Pot");
+        public override GameObject Prefab => GetPrefab("Wing Pot");
         public override void SetupPrefab(GameObject prefab) => SetupDeepFryPot(prefab);
     }
 }

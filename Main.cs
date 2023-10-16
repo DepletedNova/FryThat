@@ -39,58 +39,57 @@ namespace JustWingIt
         #region Multi-GDO Prefabs
         internal static void SetupDeepFryPot(GameObject prefab)
         {
-            GetChickenMaterial("Fried", 0xCA8243);
+            var view = prefab.TryAddComponent<ItemGroupView>();
+            if (!view.ComponentGroups.IsNullOrEmpty())
+                return;
 
-            bool wings = prefab.name.Contains("Wing");
-            bool fried = prefab.name.Contains("Fried");
+            GetChickenMaterial("Fried", 0xCA8243);
 
             prefab.ApplyMaterialToChild("Pot/Base", "Metal");
             prefab.ApplyMaterialToChild("Pot/Handle", "Metal Dark");
 
             prefab.ApplyMaterialToChild("Oil", "Frying Oil");
 
-            if (!fried)
+            SetupType(prefab.GetChild("Chicken"), false);
+
+            SetupType(prefab.GetChild("Nuggets"), true);
+
+            view.ComponentGroups = new()
             {
-                if (wings)
+                new()
                 {
-                    prefab.GetChild("Coated/Chicken 1").ApplyMaterialToChildren("", "Crab - Raw Meat");
-                    prefab.GetChild("Coated/Chicken 2").ApplyMaterialToChildren("", "Crab - Raw Meat");
-                }
-                else prefab.GetChild("Coated").ApplyMaterialToChildren("", "Crab - Raw Meat");
-
-                prefab.GetChild("Burned").ApplyMaterialToChildren("", "Burned");
-
-
-                var itemGroupView = prefab.TryAddComponent<ItemGroupView>();
-                itemGroupView.ComponentGroups = new()
-                {
-                    // Floured
-                    new()
+                    Item = GetCastedGDO<Item, FriedWing>(),
+                    Objects = new()
                     {
-                        Objects = new()
-                        {
-                            prefab.GetChild("Coated/Chicken 1"),
-                            prefab.GetChild("Coated/Chicken 2"),
-                        },
-                        Item = wings ? GetCastedGDO<Item, FlouredWing>() : GetCastedGDO<Item, FlouredNugget>()
-                    },
-
-                    // Burned
-                    new()
-                    {
-                        GameObject = prefab.GetChild("Burned"),
-                        Item = wings ? GetCastedGDO<Item, WingBurnedPot>() : GetCastedGDO<Item, NuggetBurnedPot>()
+                        prefab.GetChild("Chicken/Fried/Chicken 3"),
+                        prefab.GetChild("Chicken/Fried/Chicken 2"),
+                        prefab.GetChild("Chicken/Fried/Chicken 1")
                     }
-                };
-            }
-            else
-            {
-                prefab.GetChild("Fried").ApplyMaterialToChildren("", "Wing - Fried");
+                },
+                new()
+                {
+                    Item = GetCastedGDO<Item, FlouredWing>(),
+                    Objects = new()
+                    {
+                        prefab.GetChild("Chicken/Coated/Chicken 1"),
+                        prefab.GetChild("Chicken/Coated/Chicken 2"),
+                        prefab.GetChild("Chicken/Coated/Chicken 3")
+                    }
+                }
+            };
+        }
+        private static void SetupType(GameObject parent, bool nugget)
+        {
+            parent.GetChild("Fried").ApplyMaterialToChildren("", "Wing - Fried");
+            parent.GetChild("Burned").ApplyMaterialToChildren("", "Burned");
 
-                var splittableView = prefab.TryAddComponent<ObjectsSplittableView>();
-                List<GameObject> SplittableFried = new() { prefab.GetChild("Fried/Chicken 1"), prefab.GetChild("Fried/Chicken 2") };
-                var objectsField = ReflectionUtils.GetField<ObjectsSplittableView>("Objects");
-                objectsField.SetValue(splittableView, SplittableFried);
+            var coated = parent.GetChild("Coated");
+            for (int i = 0; i < 3; i++)
+            {
+                if (!nugget)
+                    coated.GetChild(i).ApplyMaterialToChildren("", "Crab - Raw Meat");
+                else
+                    coated.GetChild(i).ApplyMaterial("Crab - Raw Meat");
             }
         }
         #endregion

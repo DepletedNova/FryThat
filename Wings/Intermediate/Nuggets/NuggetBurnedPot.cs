@@ -14,7 +14,7 @@ namespace JustWingIt.Wings.Intermediate
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override Item DisposesTo => GetGDO<Item>(ItemReferences.Pot);
 
-        public override GameObject Prefab => GetPrefab("Nugget Pot");
+        public override GameObject Prefab => GetPrefab("Wing Pot");
         public override void SetupPrefab(GameObject prefab) => SetupDeepFryPot(prefab);
     }
 }

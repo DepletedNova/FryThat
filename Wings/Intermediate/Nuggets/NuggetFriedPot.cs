@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace JustWingIt.Wings.Intermediate
 {
-    public class NuggetFriedPot : CustomItem
+    public class NuggetFriedPot : CustomItemGroup<ItemGroupView>
     {
         public override string UniqueNameID => "Chicken Pot - Fried Nuggets";
         public override ItemStorage ItemStorageFlags => ItemStorage.None;
@@ -30,7 +30,7 @@ namespace JustWingIt.Wings.Intermediate
             }
         };
 
-        public override GameObject Prefab => GetPrefab("Fried Nugget Pot");
+        public override GameObject Prefab => GetPrefab("Wing Pot");
         public override void SetupPrefab(GameObject prefab) => SetupDeepFryPot(prefab);
     }
 }
