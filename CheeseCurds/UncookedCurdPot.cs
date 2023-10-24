@@ -32,12 +32,12 @@ namespace JustWingIt.CheeseCurds
                 Items = new()
                 {
                     GetGDO<Item>(OilPot),
-                    GetGDO<Item>(ItemReferences.Flour),
+                    //GetGDO<Item>(ItemReferences.Flour),
                     GetGDO<Item>(ItemReferences.CheeseGrated),
                 },
                 IsMandatory = true,
-                Max = 3,
-                Min = 3,
+                Max = 2,
+                Min = 2,
             }
         };
 
@@ -48,7 +48,7 @@ namespace JustWingIt.CheeseCurds
             prefab.ApplyMaterialToChild("Pot/Handle", "Metal Dark");
             prefab.ApplyMaterialToChild("Oil", "Frying Oil");
 
-            prefab.ApplyMaterialToChild("Floured", "Flour");
+            prefab.ApplyMaterialToChild("Floured", "Cheese");
             prefab.ApplyMaterialToChild("Cooked", "Batter - Cooked");
             prefab.ApplyMaterialToChild("Burned", "Burned");
 
@@ -57,7 +57,7 @@ namespace JustWingIt.CheeseCurds
             {
                 new()
                 {
-                    Item = GetCastedGDO<Item, FlouredCheese>(),
+                    Item = GetGDO<Item>(ItemReferences.CheeseGrated),
                     GameObject = prefab.GetChild("Floured")
                 },
                 new()

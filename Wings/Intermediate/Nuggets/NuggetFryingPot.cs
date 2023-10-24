@@ -40,10 +40,11 @@ namespace JustWingIt.Wings.Intermediate
                 Items = new()
                 {
                     GetCastedGDO<Item, FlouredNugget>(),
+                    GetCastedGDO<Item, FlouredNugget>(),
                     GetCastedGDO<Item, FlouredNugget>()
                 },
-                Max = 2,
-                Min = 2
+                Max = 3,
+                Min = 1
             }
         };
 
@@ -52,7 +53,7 @@ namespace JustWingIt.Wings.Intermediate
             new()
             {
                 Result = GetCastedGDO<Item, NuggetFriedPot>(),
-                Duration = 2.75f,
+                Duration = 2.5f,
                 Process = GetGDO<Process>(ProcessReferences.Cook)
             }
         };

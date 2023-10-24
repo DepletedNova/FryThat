@@ -121,11 +121,13 @@
     <Compile Include="Wings\Hot\HotSaucePot.cs" />
     <Compile Include="Wings\Hot\HotRecipe.cs" />
     <Compile Include="Wings\Hot\UnfermentedHotSauce.cs" />
+    <Compile Include="Wings\Intermediate\Nuggets\BurnedNugget.cs" />
     <Compile Include="Wings\Intermediate\Nuggets\FlouredNugget.cs" />
     <Compile Include="Wings\Intermediate\Nuggets\FriedNugget.cs" />
     <Compile Include="Wings\Intermediate\Nuggets\NuggetBurnedPot.cs" />
     <Compile Include="Wings\Intermediate\Nuggets\NuggetFriedPot.cs" />
     <Compile Include="Wings\Intermediate\Nuggets\NuggetFryingPot.cs" />
+    <Compile Include="Wings\Intermediate\Wings\BurnedWing.cs" />
     <Compile Include="Wings\Intermediate\Wings\FriedWing.cs" />
     <Compile Include="Wings\Intermediate\Wings\WingFriedPot.cs" />
     <Compile Include="Wings\Intermediate\Wings\WingBurnedPot.cs" />

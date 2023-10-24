@@ -42,12 +42,12 @@ namespace JustWingIt.CheeseCurds
             GetGDO<Item>(ItemReferences.Pot),
             GetGDO<Item>(ItemReferences.Cheese),
             GetGDO<Item>(ItemReferences.Oil),
-            GetGDO<Item>(ItemReferences.Flour),
+            //GetGDO<Item>(ItemReferences.Flour),
         };
 
         public override Dictionary<Locale, string> Recipe => new()
         {
-            { Locale.English, "Take a pot and add oil. Chop cheese, add flour, and then add to pot. Portion and serve." }
+            { Locale.English, "Take a pot and add oil. Chop cheese and add to the pot and cook. Portion and serve." }
         };
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {

@@ -13,12 +13,18 @@ namespace JustWingIt.Wings.Intermediate
         public override ItemStorage ItemStorageFlags => ItemStorage.None;
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override Item DisposesTo => GetGDO<Item>(ItemReferences.Pot);
-        public override List<Item> SplitDepletedItems => new() { GetGDO<Item>(OilPot) };
-        public override Item SplitSubItem => GetCastedGDO<Item, FriedNugget>();
-        public override int SplitCount => 2;
 
-        public override string ColourBlindTag => "Nu";
-        
+        public override List<ItemGroup.ItemSet> Sets => new();
+
+        public override bool PreventExplicitSplit => true;
+        public override bool AllowSplitMerging => true;
+        public override bool SplitByComponents => true;
+        public override Item SplitByComponentsHolder => GetGDO<Item>(OilPot);
+        public override Item RefuseSplitWith => GetGDO<Item>(OilPot);
+        public override bool ApplyProcessesToComponents => true;
+        public override int SplitCount => 1;
+        public override List<Item> SplitDepletedItems => new() { GetGDO<Item>(OilPot) };
+
         public override List<Item.ItemProcess> Processes => new()
         {
             new()

@@ -14,6 +14,7 @@ namespace JustWingIt.Wings.Intermediate
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override bool AutoCollapsing => true;
+        public override Item DisposesTo => GetCastedGDO<Item, FlouredNugget>();
 
         public override List<ItemGroup.ItemSet> Sets => new()
         {

@@ -76,7 +76,7 @@ namespace JustWingIt.Wings
 
         public override Dictionary<Locale, string> Recipe => new()
         {
-            { Locale.English, "Take a pot and add oil. Take chicken then add flour and put in the pot. A pot requires two chicken. Cook, portion, and plate. Add the ordered sauce and serve." }
+            { Locale.English, "Take a pot and add oil. Take chicken then add flour and put in the pot. A pot can hold up to three. Cook and combine with plate. Add the ordered sauce and serve." }
         };
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {

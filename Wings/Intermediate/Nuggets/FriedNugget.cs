@@ -1,4 +1,4 @@
-﻿using IngredientLib.Ingredient.Items;
+﻿using JustWingIt.Wings.Intermediate.Nuggets;
 using KitchenData;
 using KitchenLib.Customs;
 using KitchenLib.References;
@@ -21,5 +21,15 @@ namespace JustWingIt.Wings.Intermediate
 
             prefab.ApplyMaterialToChild("chicken", "Wing - Fried");
         }
+
+        public override List<Item.ItemProcess> Processes => new()
+        {
+            new()
+            {
+                Result = GetCastedGDO<Item, BurnedNugget>(),
+                RequiresWrapper = true,
+                Process = GetGDO<Process>(ProcessReferences.Cook)
+            }
+        };
     }
 }

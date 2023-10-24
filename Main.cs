@@ -2,6 +2,7 @@
 global using static KitchenLib.Utils.GDOUtils;
 global using static KitchenLib.Utils.LocalisationUtils;
 using JustWingIt.Wings.Intermediate;
+using JustWingIt.Wings.Intermediate.Nuggets;
 using Kitchen;
 using KitchenData;
 using KitchenLib;
@@ -20,7 +21,7 @@ namespace JustWingIt
     public class Main : BaseMod
     {
         public const string GUID = "nova.justwingit";
-        public const string VERSION = "1.0.1";
+        public const string VERSION = "1.1.0";
 
         public Main() : base(GUID, "Fry That!", "Zoey Davis", VERSION, ">=1.0.0", Assembly.GetExecutingAssembly()) { }
 
@@ -75,7 +76,47 @@ namespace JustWingIt
                         prefab.GetChild("Chicken/Coated/Chicken 2"),
                         prefab.GetChild("Chicken/Coated/Chicken 3")
                     }
-                }
+                },
+                new()
+                {
+                    Item = GetCastedGDO<Item, BurnedWing>(),
+                    Objects = new()
+                    {
+                        prefab.GetChild("Chicken/Burned/Chicken 1"),
+                        prefab.GetChild("Chicken/Burned/Chicken 2"),
+                        prefab.GetChild("Chicken/Burned/Chicken 3")
+                    }
+                },
+                new()
+                {
+                    Item = GetCastedGDO<Item, FriedNugget>(),
+                    Objects = new()
+                    {
+                        prefab.GetChild("Nuggets/Fried/Chicken 3"),
+                        prefab.GetChild("Nuggets/Fried/Chicken 2"),
+                        prefab.GetChild("Nuggets/Fried/Chicken 1")
+                    }
+                },
+                new()
+                {
+                    Item = GetCastedGDO<Item, FlouredNugget>(),
+                    Objects = new()
+                    {
+                        prefab.GetChild("Nuggets/Coated/Chicken 1"),
+                        prefab.GetChild("Nuggets/Coated/Chicken 2"),
+                        prefab.GetChild("Nuggets/Coated/Chicken 3")
+                    }
+                },
+                new()
+                {
+                    Item = GetCastedGDO<Item, BurnedNugget>(),
+                    Objects = new()
+                    {
+                        prefab.GetChild("Nuggets/Burned/Chicken 1"),
+                        prefab.GetChild("Nuggets/Burned/Chicken 2"),
+                        prefab.GetChild("Nuggets/Burned/Chicken 3")
+                    }
+                },
             };
         }
         private static void SetupType(GameObject parent, bool nugget)

@@ -22,14 +22,14 @@ namespace JustWingIt.Wings.Intermediate
             prefab.ApplyMaterialToChild("wing", "Wing - Fried");
         }
 
-        /*public override List<Item.ItemProcess> Processes => new()
+        public override List<Item.ItemProcess> Processes => new()
         {
             new()
             {
-                Result = GetCastedGDO<Item, WingFriedPot>(),
-                Duration = 3f,
+                Result = GetCastedGDO<Item, BurnedWing>(),
+                RequiresWrapper = true,
                 Process = GetGDO<Process>(ProcessReferences.Cook)
             }
-        };*/
+        };
     }
 }

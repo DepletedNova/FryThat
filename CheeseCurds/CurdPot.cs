@@ -17,7 +17,7 @@ namespace JustWingIt.CheeseCurds
         public override Item SplitSubItem => GetCastedGDO<Item, CheeseCurds>();
         public override int SplitCount => 1;
 
-        /*public override List<Item.ItemProcess> Processes => new()
+        public override List<Item.ItemProcess> Processes => new()
         {
             new()
             {
@@ -26,7 +26,7 @@ namespace JustWingIt.CheeseCurds
                 Duration = 4f,
                 IsBad = true,
             }
-        };*/
+        };
 
         public override GameObject Prefab => GetPrefab("Cheese Curd Pot");
     }

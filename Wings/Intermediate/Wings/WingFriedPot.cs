@@ -15,13 +15,15 @@ namespace JustWingIt.Wings.Intermediate
         public override Item DisposesTo => GetGDO<Item>(ItemReferences.Pot);
 
         public override List<ItemGroup.ItemSet> Sets => new();
+        public override bool ApplyProcessesToComponents => true;
 
         public override bool PreventExplicitSplit => true;
         public override bool AllowSplitMerging => true;
         public override bool SplitByComponents => true;
         public override Item SplitByComponentsHolder => GetGDO<Item>(OilPot);
         public override Item RefuseSplitWith => GetGDO<Item>(OilPot);
-        public override bool ApplyProcessesToComponents => true;
+        public override int SplitCount => 1;
+        public override List<Item> SplitDepletedItems => new() { GetGDO<Item>(OilPot) };
 
         public override List<Item.ItemProcess> Processes => new()
         {

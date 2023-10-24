@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace JustWingIt.CheeseCurds
 {
-    public class FlouredCheese : CustomItemGroup
+    /*public class FlouredCheese : CustomItemGroup
     {
         public override string UniqueNameID => "Cheese Curd - Floured";
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
@@ -32,5 +32,5 @@ namespace JustWingIt.CheeseCurds
         {
             prefab.ApplyMaterialToChild("cheese", "Flour");
         }
-    }
+    }*/
 }
