@@ -21,7 +21,7 @@ namespace JustWingIt
     public class Main : BaseMod
     {
         public const string GUID = "nova.justwingit";
-        public const string VERSION = "1.1.0";
+        public const string VERSION = "1.1.1";
 
         public Main() : base(GUID, "Fry That!", "Zoey Davis", VERSION, ">=1.0.0", Assembly.GetExecutingAssembly()) { }
 

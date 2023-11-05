@@ -1,6 +1,5 @@
 ﻿using IngredientLib.Ingredient.Items;
 using JustWingIt.Wings.BBQ;
-using JustWingIt.Wings.Hot;
 using KitchenData;
 using KitchenLib.Customs;
 using KitchenLib.References;

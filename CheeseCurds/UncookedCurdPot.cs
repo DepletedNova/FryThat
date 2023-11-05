@@ -48,7 +48,7 @@ namespace JustWingIt.CheeseCurds
             prefab.ApplyMaterialToChild("Pot/Handle", "Metal Dark");
             prefab.ApplyMaterialToChild("Oil", "Frying Oil");
 
-            prefab.ApplyMaterialToChild("Floured", "Cheese");
+            prefab.ApplyMaterialToChild("Floured", "Cheese - Default");
             prefab.ApplyMaterialToChild("Cooked", "Batter - Cooked");
             prefab.ApplyMaterialToChild("Burned", "Burned");
 
